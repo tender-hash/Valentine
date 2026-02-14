@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will You Be My Valentine? ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 120px;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    }
+    h1 {
+      font-size: 42px;
+      color: #ff1a66;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 22px;
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 12px;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    #yes {
+      background-color: #ff4d79;
+      color: white;
+      font-size: 24px;
+    }
+    #no {
+      background-color: #666;
+      color: white;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Will You Be My Valentine, Minakshi? ❤️</h1>
+
+<button id="yes" onclick="yesClicked()">Yes 💖</button>
+<button id="no" onclick="noClicked()">No 😢</button>
+
+<script>
+  let noSize = 24;
+  let yesSize = 24;
+
+  function noClicked() {
+    if (noSize > 6) {
+      noSize -= 4;   // NO chota hota jayega
+      yesSize += 6;  // YES bada hota jayega
+      document.getElementById("no").style.fontSize = noSize + "px";
+      document.getElementById("yes").style.fontSize = yesSize + "px";
+    }
+  }
+
+  function yesClicked() {
+    document.body.innerHTML = `
+      <h1 style="color:#ff1a66; margin-top:150px; font-size:40px;">
+        Yayyy! 💘<br>
+        Minakshi Pal said YES! ❤️<br>
+        Happy Valentine’s Day My Love 🌹
+      </h1>
+    `;
+  }
+</script>
+
+</body>
+</html>
